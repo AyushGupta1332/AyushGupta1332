@@ -1,0 +1,43 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # Runs every 12 hours
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate Stats
+        uses: anuraghazra/github-readme-stats@master
+        with:
+          username: AyushGupta1332
+          cache_seconds: 7200
+          theme: tokyonight
+          hide_border: true
+          include_all_commits: true
+          count_private: true
+
+      - name: Generate Language Card
+        uses: anuraghazra/github-readme-stats@master
+        with:
+          username: AyushGupta1332
+          layout: compact
+          card_type: lang
+          cache_seconds: 7200
+          theme: tokyonight
+          hide_border: true
+
+      - name: Save Stats Images
+        run: |
+          mkdir -p stats
+          mv *.svg stats/
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add stats/
+          git commit -m "Updated GitHub stats"
+          git push
