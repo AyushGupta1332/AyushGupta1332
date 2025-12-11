@@ -85,6 +85,17 @@ Simple & fast file encryption/decryption utility.
 
 ---
 
+## GitHub Stats
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AyushGupta1332/AyushGupta1332/main/stats/github-stats.svg" height="165" />
+  <img src="https://raw.githubusercontent.com/AyushGupta1332/AyushGupta1332/main/stats/top-langs.svg" height="165" />
+</p>
+
+
+
+---
+
 ## Achievements
 - **1st Runner-Up – HACKIT AUP Hackathon**  
   *Project:* Email Phishing Detection (NLP/ML)
